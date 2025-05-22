@@ -68,7 +68,7 @@ class Network(nn.Module):
 
     def load_model(self, model_path):
         pretrain_dict = torch.load(
-            model_path, map_location="cpu" if self.cfg.CPU_MODE else "cuda"
+            model_path, weights_only=False, map_location="cpu" if self.cfg.CPU_MODE else "cuda"
         )
         pretrain_dict = pretrain_dict['state_dict'] if 'state_dict' in pretrain_dict else pretrain_dict
         model_dict = self.state_dict()

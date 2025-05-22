@@ -23,7 +23,7 @@ CLASSIFIER:
   BIAS: True
 
 LOSS:
-  LOSS_TYPE: 'CrossEntropy'
+  LOSS_TYPE: 'CSCE'
 
 TRAIN:
   BATCH_SIZE: 128
